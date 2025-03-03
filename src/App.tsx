@@ -63,7 +63,7 @@ function App() {
         </Route>
         
         {/* Onboarding route */}
-        <Route path="/onboarding" element={user && !user.onboardingComplete ? <Onboarding /> : <Navigate to="/dashboard" />} />
+        <Route path="/onboarding" element={user ? <Onboarding /> : <Navigate to="/login" />} />
         
         {/* 404 route */}
         <Route path="*" element={<NotFound />} />
