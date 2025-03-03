@@ -55,7 +55,7 @@ const Signup = () => {
         onboardingComplete: false, // New users need onboarding
         achievements: [],
         preferences: {
-          theme: 'light',
+          theme: 'light' as 'light',
           notifications: true
         }
       }

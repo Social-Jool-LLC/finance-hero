@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FiEdit2, FiUser, FiSettings, FiCreditCard, FiShield, FiBell, FiTarget, FiStar } from 'react-icons/fi'
+import { FiEdit2, FiUser, FiSettings, FiCreditCard, FiShield, FiBell } from 'react-icons/fi'
 import ProgressBar from '../components/common/ProgressBar'
 import { UserProfile, calculateLevelProgress, calculateRemainingXP, getLevelBadge } from '../utils/profileUtils'
 
@@ -229,7 +228,7 @@ const SubscriptionCard = ({ profile }: { profile: UserProfile }) => {
 
 // Main Profile Component
 const Profile = () => {
-  const [profile, setProfile] = useState(mockUserProfile);
+  const [profile] = useState(mockUserProfile);
   const [activeTab, setActiveTab] = useState('personal');
   
   return (

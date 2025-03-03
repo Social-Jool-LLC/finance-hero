@@ -24,6 +24,7 @@ interface UserContextType {
   setUser: (user: User | null) => void
   updateUserStats: (stats: Partial<User>) => void
   logout: () => void
+  completeOnboarding: () => void
 }
 
 // Default values
@@ -71,9 +72,16 @@ export function UserProvider({ children }: { children: ReactNode }) {
     setUser(null)
     // In a real app, clear tokens, localStorage, etc.
   }
+  
+  const completeOnboarding = () => {
+    if (user) {
+      setUser({ ...user, onboardingComplete: true })
+      // In a real app, you would save to backend/localStorage here
+    }
+  }
 
   return (
-    <UserContext.Provider value={{ user, isLoading, setUser, updateUserStats, logout }}>
+    <UserContext.Provider value={{ user, isLoading, setUser, updateUserStats, logout, completeOnboarding }}>
       {children}
     </UserContext.Provider>
   )

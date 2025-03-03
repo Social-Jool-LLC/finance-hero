@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext'
 
 const ConnectBank = () => {
-  const { generateLinkToken, openPlaidLink, isPlaidLinked, isPlaidLoading } = usePlaidContext()
+  const { generateLinkToken, isPlaidLinked, isPlaidLoading } = usePlaidContext()
   const { updateUserStats } = useUser()
   const navigate = useNavigate()
   const [isConnecting, setIsConnecting] = useState(false)
@@ -55,10 +55,12 @@ const ConnectBank = () => {
     }
   }
   
+  /* Function to be used when Plaid integration is fully implemented
   const openRealPlaidLink = () => {
     setIsConnecting(true)
-    openPlaidLink()
+    // Will use the Plaid API when implemented
   }
+  */
   
   // Step descriptions
   const steps = [

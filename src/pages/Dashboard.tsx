@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiTrendingUp, FiTrendingDown, FiTarget, FiCreditCard, FiArrowRight, FiAward, FiCompass } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
@@ -108,7 +108,7 @@ const Quest = ({ title, description, reward, progress, icon }: QuestProps) => (
 const Dashboard = () => {
   const { isPlaidLinked, openPlaidLink } = usePlaidContext()
   const { user } = useUser()
-  const [insights, setInsights] = useState({
+  const [insights] = useState({
     spending: { amount: 1250, change: -12 },
     savings: { amount: 450, change: 8 },
     monthlyBudget: { amount: 2000, spent: 1250 }

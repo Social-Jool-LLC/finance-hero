@@ -43,7 +43,7 @@ const Login = () => {
         onboardingComplete: true,
         achievements: ['first_login', 'first_budget', 'week_streak'],
         preferences: {
-          theme: 'light',
+          theme: 'light' as 'light',
           notifications: true
         }
       }

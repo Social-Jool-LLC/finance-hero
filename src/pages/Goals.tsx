@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiPlus, FiEdit2, FiTrash2, FiCalendar, FiDollarSign, FiTarget, FiAward } from 'react-icons/fi'
+import { FiPlus, FiEdit2, FiTrash2, FiCalendar, FiDollarSign, FiAward } from 'react-icons/fi'
 import ProgressBar from '../components/common/ProgressBar'
-import { calculateGoalProgress, goalCategories } from '../utils/goalUtils'
+import { calculateGoalProgress } from '../utils/goalUtils'
 
 // Sample goals data
 const initialGoals = [

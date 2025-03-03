@@ -267,7 +267,7 @@ const AchievementsStats = ({ achievements }: { achievements: Achievement[] }) =>
 };
 
 const Achievements = () => {
-  const [achievements, setAchievements] = useState(mockAchievements);
+  const [achievements] = useState(mockAchievements);
   const [activeFilter, setActiveFilter] = useState('all');
   
   // Filter achievements based on selected filter

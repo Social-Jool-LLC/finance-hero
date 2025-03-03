@@ -29,13 +29,17 @@ interface NavItemProps {
   isOpen: boolean
   badge?: number
   onClick?: () => void
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
 }
 
-const NavItem = ({ to, icon, label, isOpen, badge, onClick }: NavItemProps) => {
+const NavItem = ({ to, icon, label, isOpen, badge, onClick, onMouseEnter, onMouseLeave }: NavItemProps) => {
   return (
     <NavLink
       to={to}
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={({ isActive }) => `
         flex items-center py-3 px-4 rounded-lg transition-all duration-200
         ${isActive ? 'bg-primary bg-opacity-10 text-primary font-medium' : 'text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'}

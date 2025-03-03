@@ -275,7 +275,7 @@ const FilterPanel = ({ onClose, onApplyFilters }: { onClose: () => void, onApply
 
 // Main Transactions page component
 const Transactions = () => {
-  const [transactions, setTransactions] = useState(initialTransactions)
+  const [transactions] = useState(initialTransactions)
   const [searchTerm, setSearchTerm] = useState('')
   const [showFilters, setShowFilters] = useState(false)
   const [activeFilters, setActiveFilters] = useState({

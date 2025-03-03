@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiCalendar, FiClock, FiArrowRight, FiLock, FiCheckCircle, FiAward } from 'react-icons/fi'
 import ProgressBar from '../components/common/ProgressBar'
-import { Quest, QuestDifficulty, calculateQuestProgress, questCategories, questDifficulties } from '../utils/questUtils'
+import { Quest, calculateQuestProgress, questCategories, questDifficulties } from '../utils/questUtils'
 
 // Sample quests data
 const mockQuests: Quest[] = [
